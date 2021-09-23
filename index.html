@@ -25,6 +25,37 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
+  <script language="javascript">
+    
+       function colorBackground () {
+           if (document.body.style.background = "../../../assets/images/background3.jpg") {
+              document.body.className = "changeBackground";
+           } else {
+              document.body.className = "undoBackground";
+           }
+       }
+    
+       function undoColor () {
+            if (document.body.style.background = "#708090") {
+               document.body.className = "undoBackground";
+            } else {
+               document.body.className = "changeBackground";
+            }
+       }
+    
+  </script>
+  
+  <style>
+    .changeBackground section{
+        background-image : none;
+        background-color : #708090;
+    }
+    .undoBackground section{
+        background-color : #fff;
+        background-image : "../../../assets/images/background3.jpg";
+    }
+  </style>
+        
   
 </head>
 <body>
@@ -77,6 +108,9 @@
                     <p class="mbr-text mbr-fonts-style display-7"><strong>
                         An Autobiography Website: Learn about me and my life!</strong></p>
                     
+                  <button onclick="javascript:colorBackground()">Change Color Here!</button>
+                  <button onclick="javascript:undoColor()">Chnage Back!</button>
+                  
                 </div>
             </div>
         </div>
